@@ -43,11 +43,12 @@ ggplot(data = diamonds.sample) +
 # Draw a scatter plot for `diamonds.sample` of `price` by `carat`, where each
 # point has an aesthetic _shape_ based on the diamond's `cut`.
 ggplot(data = diamonds.sample) + 
-  geom_point(mapping = aes(x = carat,y = price, color = 'red'), alpha =.11)
+  geom_point(mapping = aes(x = carat,y = price, color = 'red'), alpha =.91)
 
 # Draw a scatter plot for `diamonds.sample` of *`cut`* by `carat`, where each
 # point has an aesthetic _size_ based on the diamond's *`price`*
-
+ggplot(data = diamonds.sample) + 
+  geom_point(mapping = aes(x = cut,y = carat, color = price))
 
 # Try coloring the above plot based on the diamond's price!
 
